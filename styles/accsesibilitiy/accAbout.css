@@ -1,0 +1,418 @@
+﻿@font-face {
+    font-family: 'GveretLevinAlefAlefAlef-Regular';
+    src: url('../../fonts/GveretLevinAlefAlefAlef-Regular.eot') format('embedded-opentype');
+    src: url('../../fonts/GveretLevinAlefAlefAlef-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MPLUSRounded1c-Black';
+    src: url('../../fonts/MPLUSRounded1c-Black.eot') format('embedded-opentype');
+    src: url('../../fonts/MPLUSRounded1c-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MPLUSRounded1c-Bold';
+    src: url('../../fonts/MPLUSRounded1c-Bold.eot') format('embedded-opentype');
+    src: url('../../fonts/MPLUSRounded1c-Bold.ttf') format('truetype');
+}
+/*נגישות- אפור לבן*/
+img {
+    filter: grayscale(100%);
+}
+
+body {
+    direction: rtl; /*כיוון טקסט ימין-שמאל*/
+    margin: 0 auto; /*שלא יהיה מרווח בין התוכן לקצוות*/
+    width: 1280px; /*גודל תצוגה*/
+}
+
+#skiptopcontent, #skiptopcontent:visited {
+    z-index: 20;
+    position: absolute;
+    width: 70px;
+    text-align: center;
+    height: 50px;
+    background-color: #545454;
+    color: white;
+    top: -1000px;
+    overflow: hidden;
+    font-size: 18pt;
+    padding: 10px 20px;
+}
+
+    #skiptopcontent:focus {
+        top: 0px;
+    }
+
+#accessibility {
+    position: relative;
+    top: 100px;
+}
+
+    #accessibility img {
+        position: absolute;
+        width: 50px;
+    }
+
+    #accessibility a img {
+        display: none;
+    }
+
+    #accessibility:hover a img, #accessibility a:focus img {
+        display: block;
+    }
+
+header {
+    position: fixed; /*משאיר את החלק העליון בזמן גלילה*/
+    width: 1280px; /*רוחב*/
+    z-index: 10; /*מעביר את התפריט ניווט לשכבה העליונה*/
+}
+
+    header img {
+        height: 90px;
+        margin-right: 10px; /*מרחק מצד ימין*/
+        margin-top: -10px; /*מעלה למעלה קצת את הלוגו*/
+    }
+
+#white {
+    height: 75px;
+    box-shadow: white 0px 20px 10px 10px; /*מוסיף צל לבן למטה כדי להבדיל בין התפריט ניווט לתוכן*/
+}
+
+#turkiz {
+    background-color: #D9D9D9; /*יוצר בלוק */
+    height: 75px;
+    box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.3); /*נותן צל לבלוק*/
+}
+
+ul {
+    list-style: none; /*מוריד תבליטים*/
+}
+
+a:visited, a { /*מגדיר את הקישורים, visited-לאחר שלוחצים על הקישור*/
+    color: #3D3D3D;
+    font-size: 12pt;
+    font-family: MPLUSRounded1c-Bold;
+}
+/*תפריט ניווט ראשי*/
+#mainNav li a {
+    color: black;
+    text-decoration: none;
+}
+
+#mainNav > ul {
+    position: absolute; /*מעביר את זה לפינה של האלמנט שעוטף אותו*/
+    left: 30px; /*פיקסלים מהצד השמאלי*/
+    top: 30px; /*פיקסלים מלמעלה*/
+    margin-left: 50px; /*מרחק בין האלמנטים*/
+}
+
+    #mainNav > ul > li { /*רק לבנים ישירים בהיררכיה*/
+        display: inline-block; /*כל הבלוקים באותה השורה*/
+        margin-left: 10px;
+        box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.3); /*צל לבלוקים*/
+    }
+
+#mainNav ul li ul { /*היררכיה- הרשימה שבתוך האלמנטים ברשימה (הניווט הפנימי)*/
+    display: none; /*לא להציג*/
+    position: absolute;
+}
+
+#mainNav ul li div { /*הגדרות של הבלוקים*/
+    background-color: #A1A1A1;
+    width: 80px;
+    color: black;
+    font-size: 14pt;
+    font-family: MPLUSRounded1c-Black;
+    padding: 10px 5px; /*ריפוד- מרחק של האלמנט לאלמנטים שהוא עוטף*/
+    text-align: center;
+}
+    /*אינטראקציות ניווט*/
+    #mainNav ul li div:hover, #mainNav ul li a:focus div { /*מה קורה לבלוק במעבר עכבר או בפוקוס מקלדת*/
+        background-color: #545454;
+        color: white;
+    }
+
+#mainNav ul li:hover ul, #mainNav ul li a:focus ul { /*פתיחת הרשימה המשנית*/
+    display: block;
+    box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.3);
+}
+
+    #mainNav ul li:hover ul li, #mainNav ul li a:focus ul li { /*הגדרות של הבלוקים ברשימה המשנית*/
+        display: block;
+        margin-right: -40px;
+    }
+/*תפריט פירורי לחם*/
+#breadCrumbs {
+    position: fixed;
+    z-index: 11; /*שם מעל לתפריט הניווט*/
+}
+
+    #breadCrumbs a, #breadCrumbs a:visited { /*מגדיר את הקישורים, visited-לאחר שלוחצים על הקישור*/
+        color: #545454;
+        font-size: 12pt;
+        font-family: MPLUSRounded1c-Bold;
+        transition: 1s;
+    }
+
+        #breadCrumbs a:hover, #breadCrumbs a:focus {
+            font-size: 14pt;
+        }
+
+    #breadCrumbs ol {
+        position: relative; /* שם אותו מיד אחרי האלמנט שעוטף אותו*/
+        top: 80px;
+        right: 20px;
+    }
+
+        #breadCrumbs ol li {
+            display: inline-block; /*כולם באותה שורה*/
+            font-family: MPLUSRounded1c-Bold; /*פונט*/
+            font-size: 12pt;
+            color: #545454;
+        }
+
+            #breadCrumbs ol li:first-child:after {
+                content: ">"; /*מוסיף > בין האלמנטים*/
+            }
+
+article {
+    position: relative;
+    top: 140px;
+    width: 980px;
+    margin-right: 300px; /*מזיז את כל התוכן ימינה מהזף- בגלל הניווט*/
+}
+
+h1 {
+    font-family: MPLUSRounded1c-Black;
+    font-size: 32pt;
+    color: #545454;
+    width: 600px;
+    margin-bottom: 10px;
+}
+
+hr { /*הקו המפריד- מוגדר קו מתאר של קיוקו ירוק בהיר וגובה 0 כדי שיהיו ריבועים ירוקים*/
+    margin-top: 10px;
+    border: 3px dashed #D9D9D9;
+    height: 0px;
+    width: 600px;
+}
+
+#descraption { /*הפסקה של ההסבר*/
+    font-family: MPLUSRounded1c-Black;
+    font-size: 18pt;
+    width: 600px;
+    color: #545454;
+    width: 640px; /*רוחב החלק - כדי להתאים לעיצוב*/
+    margin-right: 0px;
+}
+
+
+#mean {
+    font-family: GveretLevinAlefAlefAlef-Regular;
+    font-size: 14pt;
+    margin-bottom:10px;
+}
+#names, #sitemap, #classes {
+    position: relative;
+    width: 850px;
+    padding: 100px 30px 30px 60px;
+}
+
+#names {
+    top: 40px;
+}
+
+#classes {
+    top: 110px;
+    clear: both;
+}
+
+#sitemap {
+    top: 120px;
+    clear: both;
+}
+aside {
+    clear: both;
+    position: relative;
+    top: 100px;
+}
+aside img{
+    height: 100px;
+    margin-right: 300px;
+}
+h3 {
+    font-family: MPLUSRounded1c-Black;
+    font-size: 16pt;
+    color: #545454;
+    margin-bottom: 10px;
+}
+
+.darkturquoise { /*הפרדות טורקיז של כותרות*/
+    position: absolute;
+    top: 0px;
+    margin-right: -30px;
+    position: absolute;
+    background-color: #545454;
+    width: 920px;
+    padding: 20px 30px;
+    clear: both;
+}
+
+#netta {
+    height: 150px;
+    width: 150px;
+    display: inline-block;
+    background-image: url('../../images/accsesiblity/בת נגישה.png');
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-size: 130px;
+    float: right;
+    right: 30px;
+}
+#netta p, #yarden p{
+    position: absolute;
+    top: 250px;
+}
+#yarden p{
+    text-align:left;
+    left: 80px;
+}
+#netta p {
+    text-align: right;
+    right: 60px;
+}
+#yarden {
+    height: 150px;
+    width: 150px;
+    display: inline-block;
+    background-image: url('../../images/accsesiblity/בן נגיש.png');
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-size: 150px;
+    float: left;
+    left: 30px;
+}
+
+h2 { /*הכיתוב בתוך הטורקיזים*/
+    color: white;
+    font-family: MPLUSRounded1c-Black;
+    font-size: 24pt;
+}
+
+article span, article p, article li, article a, article a:visited, article a:visited span {
+    font-family: MPLUSRounded1c-Bold;
+    color: #545454;
+    font-size: 14pt;
+    margin-top: 10px;
+    width: 530px;
+    transition: 1s;
+}
+    article a:hover, article a:focus, article a:hover span, article a:focus span {
+        font-size: 16pt;
+    }
+    article ul {
+        list-style: circle;
+    }
+#credit {
+    position: relative;
+    bottom: -17px;
+    width: 100px;
+    float: left;
+    left: 230px;
+}
+#credit p{
+    position: absolute;
+    top: 15px;
+    margin-right: 40px;
+    z-index: 21;
+    text-align: right;
+    width: 100px;
+}
+    #credit img{
+        position: absolute;
+        width: 300px;
+        z-index: 20;
+    }
+
+/*מפת אתר*/
+footer {
+    position: relative;
+    top: 250px;
+    bottom: 0px;
+    z-index: 10; /*כדי שאף אלמנט לא יסתיר אותה*/
+    width: 1280px;
+    height: 130px;
+    background-color: #D9D9D9;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+    footer > ul {
+        position: absolute;
+    }
+
+    footer ul li, footer ul li a {
+        color: black;
+        font-family: MPLUSRounded1c-Bold;
+        font-size: 14pt;
+    }
+
+    footer ul li {
+        display: inline-block;
+        width: 160px;
+        float: right;
+        margin-right: 45px;
+    }
+
+    footer a, footer a:visited {
+        color: black;
+        transition: 1s;
+    }
+
+        footer a:hover, footer a:focus {
+            font-size: 15pt;
+        }
+
+    footer ul li ul {
+        position: absolute;
+        display: block;
+        margin-right: -85px;
+    }
+
+        footer ul li ul li {
+            display: block;
+            clear: both;
+            margin-top: 5px;
+        }
+
+    footer > ul > li, footer > ul > li > a {
+        font-family: MPLUSRounded1c-Black;
+    }
+#freepik {
+    position: absolute;
+    left: 120px;
+    bottom: 20px;
+    font-family: MPLUSRounded1c-Bold;
+    font-size: 12pt;
+}
+
+    #freepik a span {
+        font-family: MPLUSRounded1c-Bold;
+        font-size: 12pt;
+    }
+
+#add {
+    font-family: GveretLevinAlefAlefAlef-Regular;
+    font-size: 18pt;
+}
+/*קישורים לא עובדים/לא קיימים*/
+.notallowed {
+    text-decoration: none;
+    cursor: not-allowed; /*מגדיר שאי אפשר להיכנס לקישור קיים*/
+}
+
+.forFocus {
+    text-decoration: none;
+    cursor: unset; /*מגדיר שאי אפשר להיכנס לקישור קיים*/
+}

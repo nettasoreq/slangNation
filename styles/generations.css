@@ -1,0 +1,617 @@
+﻿@font-face {
+    font-family: 'GveretLevinAlefAlefAlef-Regular';
+    src: url('../fonts/GveretLevinAlefAlefAlef-Regular.eot') format('embedded-opentype');
+    src: url('../fonts/GveretLevinAlefAlefAlef-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'MPLUSRounded1c-Black';
+    src: url('../fonts/MPLUSRounded1c-Black.eot') format('embedded-opentype');
+    src: url('../fonts/MPLUSRounded1c-Black.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'MPLUSRounded1c-Bold';
+    src: url('../fonts/MPLUSRounded1c-Bold.eot') format('embedded-opentype');
+    src: url('../fonts/MPLUSRounded1c-Bold.ttf') format('truetype');
+}
+/*נגישות*/
+#skiptopcontent, #skiptopcontent:visited {
+    z-index: 20;
+    position: absolute;
+    width: 70px;
+    text-align: center;
+    height: 50px;
+    background-color: #145566;
+    color: #B5D6CA;
+    top: -1000px;
+    overflow: hidden;
+    font-size: 18pt;
+    padding: 10px 20px;
+}
+    #skiptopcontent:focus {
+        top: 0px;
+    }
+#accessibility {
+    position: relative;
+    top: 100px;
+}
+    #accessibility img {
+        position: absolute;
+        width: 50px;
+    }
+    #accessibility a img {
+        display: none;
+    }
+    #accessibility:hover a img, #accessibility a:focus img {
+        display: block;
+    }
+/*הגדרות הדף*/
+body {
+    direction: rtl; /*כיוון טקסט ימין-שמאל*/
+    margin: 0 auto; /*שלא יהיה מרווח בין התוכן לקצוות*/
+    width: 1280px; /*גודל תצוגה*/
+}
+/*הלמעלה*/
+header {
+    position: fixed; /*משאיר את החלק העליון בזמן גלילה*/
+    width: 1280px; /*רוחב*/
+    z-index: 10; /*מעביר את התפריט ניווט לשכבה העליונה*/
+}
+    header img {
+        height: 90px;
+        margin-right: 10px; /*מרחק מצד ימין*/
+        margin-top: -10px; /*מעלה למעלה קצת את הלוגו*/
+    }
+#white {
+    height: 75px;
+    box-shadow: white 0px 20px 10px 10px; /*מוסיף צל לבן למטה כדי להבדיל בין התפריט ניווט לתוכן*/
+}
+#turkiz {
+    background-color: #B5D6CA; /*יוצר בלוק טורקיז*/
+    height: 75px;
+    box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.3); /*נותן צל לבלוק*/
+}
+ul, ol {
+    list-style: none; /*מוריד תבליטים*/
+}
+/*תפריט ניווט ראשי*/
+#mainNav li a {
+    color: #182F50;
+    text-decoration: none;
+}
+#mainNav > ul {
+    position: absolute; /*מעביר את זה לפינה של האלמנט שעוטף אותו*/
+    left: 30px; /*פיקסלים מהצד השמאלי*/
+    top: 30px; /*פיקסלים מלמעלה*/
+    margin-left: 50px; /*מרחק בין האלמנטים*/
+}
+    #mainNav > ul > li { /*רק לבנים ישירים בהיררכיה*/
+        display: inline-block; /*כל הבלוקים באותה השורה*/
+        margin-left: 10px;
+        box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.3); /*צל לבלוקים*/
+    }
+#mainNav ul li ul { /*היררכיה- הרשימה שבתוך האלמנטים ברשימה (הניווט הפנימי)*/
+    display: none; /*לא להציג*/
+    position: absolute;
+}
+#mainNav ul li div { /*הגדרות של הבלוקים*/
+    background-color: #FFD143;
+    width: 80px;
+    color: #182F50;
+    font-size: 14pt;
+    font-family: MPLUSRounded1c-Black;
+    padding: 10px 5px; /*ריפוד- מרחק של האלמנט לאלמנטים שהוא עוטף*/
+    text-align: center;
+}
+    /*אינטראקציות ניווט*/
+    #mainNav ul li div:hover, #mainNav ul li a:focus div { /*מה קורה לבלוק במעבר עכבר או בפוקוס מקלדת*/
+        background-color: #145566;
+        color: #B5D6CA;
+    }
+#mainNav ul li:hover ul, #mainNav ul li a:focus ul { /*פתיחת הרשימה המשנית*/
+    display: block;
+    box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.3);
+}
+    #mainNav ul li:hover ul li, #mainNav ul li a:focus ul li { /*הגדרות של הבלוקים ברשימה המשנית*/
+        display: block;
+        margin-right: -40px;
+    }
+#mainNav #that {
+    background-color: #145566;
+    color: #B5D6CA;
+}
+/*תפריט פירורי לחם*/
+#breadCrumbs {
+    position: fixed;
+    z-index: 11; /*שם מעל לתפריט הניווט*/
+}
+    #breadCrumbs a, #breadCrumbs a:visited { /*מגדיר את הקישורים, visited-לאחר שלוחצים על הקישור*/
+        color: #467E6A;
+        font-size: 12pt;
+        font-family: MPLUSRounded1c-Bold;
+        transition: 1s;
+    }
+        #breadCrumbs a:hover {
+            font-size: 14pt;
+        }
+    #breadCrumbs ol {
+        position: relative; /* שם אותו מיד אחרי האלמנט שעוטף אותו*/
+        top: 80px;
+        right: 20px;
+    }
+        #breadCrumbs ol li {
+            display: inline-block; /*כולם באותה שורה*/
+            font-family: MPLUSRounded1c-Bold; /*פונט*/
+            font-size: 12pt;
+            color: #467E6A;
+        }
+            #breadCrumbs ol li:first-child:after {
+                content: ">"; /*מוסיף > בין האלמנטים*/
+            }
+/*ניווט בצד*/
+#sideNav {
+    position: fixed; /*שתמיד יהיה שם*/
+    top: 150px;
+    display: block;
+    z-index: 0;
+    background-image: url('../images/generations/קו סרגל צד.png');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 20px;
+}
+    #sideNav li {
+        width: 230px;
+        height: 70px;
+        display: block;
+    }
+    #sideNav img {
+        width: 140px;
+        float: right; /*מציף את האלמנט לצד ימין וככה מאפשר לאלמנטים נוספים להיות בשורה הזאת*/
+        margin-right: 15px;
+        margin-top: 5px;
+    }
+    #sideNav #resize {
+        width: 130px;
+        margin-right: 25px;
+    }
+    #sideNav a, #sideNav a:visited {
+        display: inline-block; /*כל האלמנטים של הקישור באותה השורה*/
+        text-decoration: none; /*מוריד את הקו*/
+        color: #467E6A;
+    }
+    #sideNav span { /*הגדרות של הטקסט בתפריט*/
+        position: relative;
+        top: 20px;
+        left: -10px;
+        font-size: 12pt;
+        font-family: MPLUSRounded1c-Black;
+    }
+    #sideNav li:hover, #sideNav li a:focus { /*במעבר עכבר מוסיף ריבוע*/
+        border: 1px solid lightgray;
+        box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.3);
+    }
+/*תוכן הדף*/
+article {
+    position: relative;
+    top: 140px;
+    width: 900px;
+    right: 350px; /*מזיז את כל התוכן ימינה מהזף- בגלל הניווט*/
+    color: #145566;
+}
+/*פתיחה*/
+#descraption {
+    width: 640px; /*רוחב החלק - כדי להתאים לעיצוב*/
+}
+h1 {
+    font-family: MPLUSRounded1c-Black;
+    font-size: 32pt;
+    color: #182F50;
+}
+h2 {
+    font-family: MPLUSRounded1c-Black;
+    font-size: 28pt;
+    color: #182F50;
+    margin-bottom: 20px;
+}
+hr { /*הקו המפריד- מוגדר קו מתאר של קיוקו ירוק בהיר וגובה 0 כדי שיהיו ריבועים ירוקים*/
+    margin-top: 20px;
+    border: 3px dashed #B5D6CA;
+    height: 0px;
+}
+#descraption p { /*הפסקה של ההסבר*/
+    font-family: MPLUSRounded1c-Black;
+    font-size: 18pt;
+    width: 600px;
+    color: #145566;
+    margin-bottom: 10px;
+}
+/*תפריט ניווט פנימי*/
+#insideNav {
+    position: relative;
+    right: 0px;
+}
+    #insideNav ul {
+        position: absolute;
+        margin-right: -35px;
+    }
+    #insideNav li {
+        display: inline-block;
+        float: right;
+        margin-left: 20px;
+    }
+        #insideNav li a, #insideNav li a:visited {
+            text-decoration: none;
+        }
+            #insideNav li a div {
+                width: 100px;
+                text-align: center;
+                padding: 10px 15px;
+                background-color: #B5D6CA;
+                color: #145566;
+                font-family: GveretLevinAlefAlefAlef-Regular;
+                font-size: 18pt;
+            }
+                #insideNav li a div:hover, #insideNav li a:focus div {
+                    background-repeat: no-repeat;
+                    background-size: 130px;
+                    background-color: white;
+                    font-size: 11pt;
+                    width: 130px;
+                    padding: 50px 0px 5px 0px;
+                }
+    #insideNav #teen:hover br, #insideNav a:focus #teen br {
+        display: none; /*לא עבד ירידת שורה עם padding ולכן שמנו BR. במצב מעבר עכבר אנחנו מבטלים את ירידת השורה*/
+    }
+    #insideNav #grand:hover, #insideNav a:focus #grand {
+        background-image: url('../images/generations/ניווט פנימי סבים.png');
+    }
+    #insideNav #parents:hover, #insideNav a:focus #parents {
+        background-image: url('../images/generations/ניווט פנימי הורים.png');
+    }
+    #insideNav #us:hover, #insideNav a:focus #us {
+        background-image: url('../images/generations/ניווט פנימי צעירים.png');
+    }
+    #insideNav #teen:hover, #insideNav a:focus #teen {
+        background-image: url('../images/generations/ניווט פנימי נוער.png');
+    }
+/*הגדרות סקשנים*/
+#fifties, #seventies, #nineties, #now {
+    position: relative;
+    clear: both;
+}
+#fifties {
+    top: 120px;
+}
+#seventies {
+    top: 1750px;
+}
+#nineties {
+    top: 3380px;
+}
+#now {
+    top: 4800px;
+}
+#content, #tofifties, #toseventies, #tonineties, #tonow {/*כדי שתפריט הניווט לא יסתיר את התוכן*/
+    position: absolute;
+    top: -120px;
+}
+/*תוכן בתוך הסקשנים*/
+.words {
+    position: absolute;
+    top: 180px;
+    right: 30px;
+    width: 810px;
+    clear: both;
+}
+/*הגדרות טורקיזים*/
+.darkturquoise { /*הפרדות טורקיז של כותרות*/
+    position: absolute;
+    top: 50px;
+    background-color: #145566;
+    width: 870px;
+    padding: 20px 30px;
+}
+h3 { /*הכיתוב בתוך הטורקיזים*/
+    color: white;
+    font-family: MPLUSRounded1c-Black;
+    font-size: 20pt;
+}
+.headlineImg {/*תמונה שמופיעה במפריד*/
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: 100px;
+    top: 0px;
+}
+#fifties .headlineImg {
+    background-image: url('../images/generations/מפריד- סבים.png');
+    width: 150px;
+    height: 100px;
+    right: -30px;
+    background-size: 110px;
+}
+#seventies .headlineImg {
+    background-image: url('../images/generations/דמויות מפריד הורים.png');
+    background-size: 90px;
+    right: 10px;
+}
+#nineties .headlineImg {
+    background-image: url('../images/generations/דמויות הפרדה שנות ה90.png');
+}
+#now .headlineImg {
+    background-image: url('../images/generations/דמויות מפריד נערים.png');
+    right: 5px;
+}
+/*תמונות אווירה- אמצע*/
+.inextra {
+    display: inline-block;
+    position: absolute;
+    background-repeat: no-repeat;
+}
+#fifties .inextra {
+    background-image: url('../images/generations/תמונת אמצע שנות ה50.png');
+    width: 450px;
+    height: 400px;
+    background-size: 450px;
+    right: 50px;
+    margin-top: -380px;
+}
+#seventies .inextra {
+    background-image: url('../images/generations/תמונת אמצע שנות ה70.png');
+    background-size: 350px;
+    right: 50px;
+    width: 450px;
+    height: 400px;
+    margin-top: -280px;
+}
+#nineties .inextra {
+    background-image: url('../images/generations/תמונת אמצע שנות ה90.png');
+    background-size: 550px;
+    width: 550px;
+    height: 500px;
+    right: 0px;
+    margin-top: -300px;
+}
+#now .inextra {
+    background-image: url('../images/generations/תמונת אמצע היום.png');
+    background-size: 350px;
+    right: 100px;
+    width: 350px;
+    height: 350px;
+    margin-top: -230px;
+}
+/*הגדרות מילים*/
+.firstRightWord .word, .secRightWord .word {
+    margin-bottom: 10px;
+    margin-top: 20px;
+    float: right;
+    clear: both; /*אחרי float, כשרוצים לפתוח שורה חדשה עושים clear*/
+    font-size: 18pt;
+    font-family: MPLUSRounded1c-Black;
+}
+.mean {
+    margin-bottom: 20px;
+    clear: both;
+    font-size: 16pt;
+    font-family: MPLUSRounded1c-Bold;
+}
+.leftWord .word {
+    margin-bottom: 10px;
+    margin-top: 20px;
+    float: left;
+    clear: both; /*אחרי float, כשרוצים לפתוח שורה חדשה עושים clear*/
+    font-size: 18pt;
+    font-family: MPLUSRounded1c-Black;
+}
+/*תמונות שימוש במילה*/
+.extra {
+    width: 450px;
+    position: relative;
+    right: 450px;
+    margin-top: -170px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    clear: both;
+    float: left;
+}
+/*מעבר לדף סלנג קורונה*/
+#tocorona {
+    width: 450px;
+    position: absolute;
+    left: -25px;
+    top: 6100px;
+    line-height: 25px;
+    letter-spacing: 1px;
+}
+/*תיקון יוצאי דופן*/
+#seventies .firstRightWord .extra, #nineties .extra, #now .extra {
+    margin-top: -190px;
+}
+    #seventies .firstRightWord .extra p, #nineties .extra p, #now .extra p {
+        top: 70px;
+    }
+    /*תמונות שימוש ומעבר לקורונה*/
+    .extra img, #tocorona img {
+        width: 450px;
+        position: absolute;
+    }
+.extra p, #tocorona p {
+    width: 230px;
+    top: 40px;
+    right: 40px;
+    text-align: right;
+    position: absolute;
+    clear: both;
+    float: left; /*שם בצד שמאל*/
+    margin-bottom: 10px;
+    font-family: GveretLevinAlefAlefAlef-Regular;
+    font-size: 16pt;
+}
+.extra b, #tocorona b {
+    font-family: GveretLevinAlefAlefAlef-Regular;
+    font-size: 16pt;
+    font-weight: 900;
+}
+/*מיקום בתוך הסקשנים של התכנים*/
+.firstRightWord {
+    float: right;
+    clear: both;
+    margin-bottom: 60px;
+}
+.leftWord {
+    float: left;
+    clear: both;
+    text-align: left;
+    display: inline-block;
+}
+.secRightWord {
+    float: right;
+    clear: both;
+}
+    /*הגדרות הקלטות- הסבר: 
+    מכיוון שכדי ליצור כפתור מותאם להקלטה נדרש ג'אווה סקריפט, 
+    מה שעשינו על פי הצעת חן המתרגלת זה זה למקם את כפתור הפעלת ההקלטה ואת התמונה שבחרנו באותו המיקום, 
+    לאחר מכן להפוך את כפתורי ההפעלה לשקופים. 
+    נתקלנו בבעיה שעדיין ניתן ללחוץ על הכפתורים השונים וזה יוצר בעיות ולכן
+    כדי שהעכבר לא יתן ללחוץ על כפתורי הפעולה, 
+    מיקמנו את כפתורי הפעולה מתחת לשטח הדף בשכבה -1.
+    רק במעבר עכבר כפרתוי הפעולה עולים לשכבה העליונה ורק אז ניתן ללחוץ. 
+*/
+    .secRightWord .rec, .firstRightWord .rec {
+        position: relative;
+        right: 5px;
+        top: 5px;
+        float: right;
+        background-image: url('../images/buttons/אוזניות.png');
+        width: 50px;
+        height: 50px;
+        background-size: 100px;
+        background-position-x: -47px;
+    }
+        .secRightWord .rec audio, .firstRightWord .rec audio {
+            position: absolute;
+            height: 30px;
+            width: 100px;
+            top: 15px;
+            margin-right: -40px;
+            opacity: 0;
+            z-index: -1;
+        }
+.leftWord .rec {
+    position: relative;
+    float: left;
+    top: 5px;
+    background-image: url('../images/buttons/אוזניות.png');
+    width: 50px;
+    height: 50px;
+    background-size: 100px;
+    background-position-x: -47px;
+    left: 0px;
+}
+    .leftWord .rec audio {
+        position: absolute;
+        height: 30px;
+        width: 100px;
+        top: 15px;
+        left: 0px;
+        margin-right: -50px;
+        opacity: 0;
+        z-index: -1;
+    }
+    .secRightWord .rec:hover audio, .firstRightWord .rec:hover audio, .leftWord .rec:hover audio {
+        z-index: 1;
+    }
+    .secRightWord .rec:hover, .firstRightWord .rec:hover, .leftWord .rec:hover {
+        background-position-x: -2px;
+    }
+    .rec audio:focus {
+        border-bottom: 5px solid;
+        border-bottom-color: rgba(0,0,0,1)
+    }
+    /*כפתור מעבר לסלנג קורונה*/
+#arrows {
+    position: absolute;
+    top: 150px;
+    left: 200px;
+    height: 100px;
+    width: 100px;
+    background-repeat: no-repeat;
+    background-size: 200px;
+    background-position-x: -100px;
+    background-image: url('../images/buttons/חצים טורקיזים.png');
+}
+    #arrows:hover, #tocorona a:focus #arrows {
+        background-position-x: -10px;
+    }
+/*מפת אתר*/
+footer {
+    position: relative;
+    top: 6250px;
+    bottom: 0px;
+    z-index: 10; /*כדי שאף אלמנט לא יסתיר אותה*/
+    width: 1280px;
+    height: 130px;
+    background-color: #B5D6CA;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+    footer > ul {
+        position: absolute;
+    }
+    footer ul li, footer ul li a {
+        color: #182F50;
+        font-family: MPLUSRounded1c-Bold;
+        font-size: 14pt;
+    }
+    footer ul li {
+        display: inline-block;
+        width: 160px;
+        float: right;
+        margin-right: 45px;
+    }
+    footer a, footer a:visited {
+        color: #182F50;
+        transition: 1s;
+    }
+        footer a:hover, footer a:focus {
+            font-size: 15pt;
+        }
+    footer ul li ul {
+        position: absolute;
+        display: block;
+        margin-right: -85px;
+    }
+        footer ul li ul li {
+            display: block;
+            clear: both;
+            margin-top: 5px;
+        }
+    footer > ul > li, footer > ul > li > a {
+        font-family: MPLUSRounded1c-Black;
+    }
+#freepik {
+    position: absolute;
+    left: 120px;
+    bottom: 20px;
+    font-family: MPLUSRounded1c-Bold;
+    font-size: 12pt;
+}
+    #freepik a span {
+        font-family: MPLUSRounded1c-Bold;
+        font-size: 12pt;
+    }
+#add {
+    font-family: GveretLevinAlefAlefAlef-Regular;
+    font-size: 18pt;
+}
+/*קישורים לא עובדים/לא קיימים*/
+.notallowed {
+    text-decoration: none;
+    cursor: not-allowed; /*מגדיר שאי אפשר להיכנס לקישור קיים*/
+}
+
+.forFocus {
+    text-decoration: none;
+    cursor: unset; /*מגדיר שאי אפשר להיכנס לקישור קיים*/
+}

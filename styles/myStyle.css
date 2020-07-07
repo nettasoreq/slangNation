@@ -1,0 +1,401 @@
+﻿/*הטמעת פונטים*/
+@font-face {
+    font-family: 'GveretLevinAlefAlefAlef-Regular';
+    src: url('../fonts/GveretLevinAlefAlefAlef-Regular.eot') format('embedded-opentype');
+    src: url('../fonts/GveretLevinAlefAlefAlef-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'MPLUSRounded1c-Black';
+    src: url('../fonts/MPLUSRounded1c-Black.eot') format('embedded-opentype');
+    src: url('../fonts/MPLUSRounded1c-Black.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'MPLUSRounded1c-Bold';
+    src: url('../fonts/MPLUSRounded1c-Bold.eot') format('embedded-opentype');
+    src: url('../fonts/MPLUSRounded1c-Bold.ttf') format('truetype');
+}
+
+body {
+    direction: rtl; /*כיוון טקסט ימין-שמאל*/
+    margin: 0 auto; /*שלא יהיה מרווח בין התוכן לקצוות*/
+    width: 1280px; /*גודל תצוגה*/
+}
+/*נגישות- קפוץ לתוכן וכפתור נגישות- הגדרות שוות לכל הדפים*/
+#skiptopcontent, #skiptopcontent:visited{ /*הגדרות כפתור קפוץ לתוכן*/
+    z-index: 20;
+    position: absolute;
+    width: 70px;
+    text-align: center;
+    height: 50px;
+    background-color: #145566;
+    color: #B5D6CA;
+    top: -1000px;
+    overflow: hidden;
+    font-size: 18pt;
+    padding: 10px 20px;
+}
+    #skiptopcontent:focus{ /*קופץ למיקום בדף בעת פוקוס*/
+        top: 0px;
+    }
+#accessibility { 
+    position: relative;
+    top: 100px;
+}
+    #accessibility img {
+        position: absolute;
+        width: 50px;
+    }
+    #accessibility a img{
+        display: none;
+    }
+    #accessibility:hover a img, #accessibility a:focus img {
+        display: block;
+    }
+#content { /*מכיוון שהתפריט מסתיר את החלק העליון של הדף, אנחנו מגדירים את מיקום העוגן מעל התוכן*/
+    position: absolute;
+    top: -120px;
+}
+/*הגדרות החלק העליון*/
+header {
+    position: fixed; /*משאיר את החלק העליון בזמן גלילה*/
+    width: 1280px; /*רוחב*/
+    z-index: 10; /*מעביר את התפריט ניווט לשכבה העליונה*/
+}
+    header img {/*לוגו*/
+        height: 90px;
+        margin-right: 10px; /*מרחק מצד ימין*/
+        margin-top: -10px; /*מעלה למעלה קצת את הלוגו*/
+    }
+#white {
+    height: 75px;
+    box-shadow: white 0px 20px 10px 10px; /*מוסיף צל לבן למטה כדי להבדיל בין התפריט ניווט לתוכן*/
+}
+#turkiz {
+    background-color: #B5D6CA; /*יוצר בלוק טורקיז*/
+    height: 75px;
+    box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.3); /*נותן צל לבלוק*/
+}
+ul {
+    list-style: none; /*מוריד תבליטים*/
+}
+a:visited, a { /*מגדיר את הקישורים, visited-לאחר שלוחצים על הקישור*/
+    color: #467E6A;
+    font-size: 12pt;
+    font-family: MPLUSRounded1c-Bold;
+}
+
+/*תפריט ניווט ראשי*/
+#mainNav li a {
+    color: #182F50;
+    text-decoration: none;
+}
+#mainNav > ul {
+    position: absolute; /*מעביר את זה לפינה של האלמנט שעוטף אותו*/
+    left: 30px; /*פיקסלים מהצד השמאלי*/
+    top: 30px; /*פיקסלים מלמעלה*/
+    margin-left: 50px; /*מרחק בין האלמנטים*/
+}
+    #mainNav > ul > li { /*רק לבנים ישירים בהיררכיה*/
+        display: inline-block; /*כל הבלוקים באותה השורה*/
+        margin-left: 10px;
+        box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.3); /*צל לבלוקים*/
+    }
+#mainNav ul li ul { /*היררכיה- הרשימה שבתוך האלמנטים ברשימה (הניווט הפנימי)*/
+    display: none; /*לא להציג*/
+    position: absolute;
+}
+#mainNav ul li div { /*הגדרות של הבלוקים*/
+    background-color: #FFD143;
+    width: 80px;
+    color: #182F50;
+    font-size: 14pt;
+    font-family: MPLUSRounded1c-Black;
+    padding: 10px 5px; /*ריפוד- מרחק של האלמנט לאלמנטים שהוא עוטף*/
+    text-align: center;
+}
+
+    /*אינטראקציות ניווט*/
+    #mainNav ul li div:hover, #mainNav ul li a:focus div{ /*מה קורה לבלוק במעבר עכבר או בפוקוס מקלדת*/
+        background-color: #145566;
+        color: #B5D6CA;
+    }
+#mainNav ul li:hover ul, #mainNav ul li a:focus ul { /*פתיחת הרשימה המשנית*/
+    display: block;
+    box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.3);
+}
+    #mainNav ul li:hover ul li, #mainNav ul li a:focus ul li { /*הגדרות של הבלוקים ברשימה המשנית*/
+        display: block;
+        margin-right: -40px;
+    }
+
+/*הגדרות הדף*/
+/*פתיח- קריאה לפעולה*/
+#image {
+    position: relative;
+    top: 150px;
+    height: 500px;
+    width: 900px;
+    right: 200px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 900px; /*שינוי גודל התמונה כדי שתתאים*/
+    background-image: url('../images/home/דורות.png');
+}
+#back {
+    position: absolute;
+    background-color: rgba(256, 256, 256, 0.9); /*מוסיף הגדרת שקיפות להגדרת הרקע*/
+    top: 150px;
+    width:900px;
+    padding: 30px 50px;
+} /*רקע לבן שמסתיר את התמונה*/
+#image h2 {
+    font-family: GveretLevinAlefAlefAlef-Regular;
+    margin-right: -40px;
+    font-size: 48pt;
+    text-align: center;
+    color: #145566;
+    margin-bottom: 10px;
+}/*כיתוב*/
+#image h3 {
+    text-align: center;
+    margin-right: 250px;
+    font-family: MPLUSRounded1c-Black;
+    font-size: 32pt;
+    color: #145566;
+    width: 350px;
+}/*כיתוב*/
+.aroows {/*כפתורים*/
+    height: 100px;
+    width: 150px;
+    background-repeat: no-repeat;
+    background-size: 300px;
+    background-position-x: -150px;
+}
+#image .aroows {
+    position: absolute;
+    top: 100px;
+    left: 220px;
+    background-image: url('../images/buttons/חצים טורקיזים.png');
+}
+.aroows:hover, a:focus .aroows { /*שינוי כפתור*/
+    background-position-x: -10px;
+}
+ /*למרות שתמונת הכפתורים חשובה לתוכן, בחרנו לשים אותה כתמונת רקע כי הגדילה של החץ לא עובדת טוב שזה בתמונות בקובץ*/
+
+#darkturquoise { /*הפרדות טורקיז של כותרות*/
+        position: relative;
+        float: left;
+        top: 40px;
+        background-color: #145566;
+        width: 1000px;
+        padding: 20px 50px;
+        clear: both;
+        box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.4); /*נותן צל לבלוק*/
+    }
+#darkturquoise h2 { /*הכיתוב בתוך הטורקיזים*/
+    color: white;
+    font-family: MPLUSRounded1c-Bold;
+    font-size: 30pt;
+    width: 670px;
+}
+/*בחירת אנשים*/
+#people{
+    position: relative;
+    top: 180px;
+}
+    #people h2 {
+        position: absolute;
+        top: 15px;
+        right: 450px;
+        color: #145566;
+        text-align: center;
+        font-family: MPLUSRounded1c-Black;
+        font-size: 40pt;
+        text-shadow: 2px 1px 4px rgba(0,0,0,0.5);
+    }
+    #people > div {
+        margin-top: 50px;
+        height: 450px;
+        width: 200px;
+        display: inline-block;
+        margin-right: 10px;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: 210px;
+    }
+    #people div a div, #people div a div:visited {
+        position: absolute;
+        background-color: #B5D6CA;
+        width: 145px;
+        padding: 20px 10px;
+        text-align: center;
+        font-family: GveretLevinAlefAlefAlef-Regular;
+        color: #145566;
+        font-size: 20pt;
+        top: 380px;
+        transition: 1s;
+        box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.4); /*נותן צל לבלוק*/
+    }
+        #people div a div:hover, #people div a:focus div {
+            width: 180px;
+            background-color: #145566;
+            color: #B5D6CA;
+            font-size: 24pt;
+        }
+        /*התאמות של כל אחד ספציפי בגלל שינוי גדלים בתמונות*/
+#tlv {
+            background-image: url('../images/home/תל אביבים.png');
+            right: 170px;
+        }
+        #tlv a div {
+            right: 20px;
+        }
+            #tlv a div:hover, #tlv a:focus div {
+                right: 0px;
+            }
+#jlm {
+    background-image: url('../images/home/ירושלמים.png');
+    right: 410px;
+}
+    #jlm a div {
+        right: 7px;
+    }
+        #jlm a div:hover, #jlm a:focus div {
+            right: -12px;
+        }
+#aravi {
+    background-image: url('../images/home/ערבים.png');
+    right: 650px;
+}
+    #aravi a div {
+        right: 12px;
+    }
+        #aravi a div:hover, #jlm a:focus div {
+            right: -5px;
+        }
+#dati {
+    background-image: url('../images/home/דתיים.png');
+    right: 900px;
+}
+    #dati a div {
+        right:0px;
+    }
+        #dati a div:hover, #dati a:focus div {
+            right: -15px;
+        }
+
+/*הצפות תוכן למטה*/
+#yellowText{
+    clear:both;
+    position: relative;
+    top: 620px;
+    right: 10px;
+}
+.yellow {
+    display: inline-block;
+    width: 230px;
+    padding: 40px 30px 0px 30px;
+    background-color: #FFD143;
+    color: #182F50;
+    border-radius: 50px;
+    margin-right: 95px;
+    box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.4); /*נותן צל לבלוק*/
+}
+    .yellow p {
+        font-family: MPLUSRounded1c-Bold;
+        font-size: 20pt;
+        line-height: 30px;
+    }
+.yellow span{
+    margin: 10px 0px;
+    display: block;
+    font-family: GveretLevinAlefAlefAlef-Regular;
+    font-size: 28pt;
+}
+    .yellow .aroows {
+        position: relative;
+        background-image: url('../images/buttons/חצים כחול טורקיז.png');
+        margin-top: -20px;
+        right:90px;
+    }
+#new {
+    margin-top: -30px;
+    position: absolute;
+    left: 140px;
+    transform: rotate(347deg);
+    font-family: MPLUSRounded1c-Black;
+    font-size: 32pt;
+    text-shadow: 2px 1px 4px rgba(0,0,0,0.5);
+}
+
+/*מפת אתר*/
+footer {
+    position: relative;
+    top: 700px;
+    bottom: 0px;
+    z-index: 10; /*כדי שאף אלמנט לא יסתיר אותה*/
+    width: 1280px;
+    height: 130px;
+    background-color: #B5D6CA;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+    footer > ul {
+        position: absolute;
+    }
+    footer ul li, footer ul li a {
+        color: #182F50;
+        font-family: MPLUSRounded1c-Bold;
+        font-size: 14pt;
+    }
+    footer ul li {
+        display: inline-block;
+        width: 160px;
+        float: right;
+        margin-right: 45px;
+    }
+    footer a, footer a:visited {
+        color: #182F50;
+        transition: 1s;
+    }
+        footer a:hover, footer a:focus {
+            font-size: 15pt;
+        }
+        footer ul li ul {
+            position: absolute;
+            display: block;
+            margin-right: -85px;
+        }
+            footer ul li ul li {
+                display: block;
+                clear: both;
+                margin-top: 5px;
+            }
+    footer > ul > li, footer > ul > li > a {
+        font-family: MPLUSRounded1c-Black;
+    }
+#freepik{
+    position: absolute;
+    left: 120px;
+    bottom: 20px;
+    font-family: MPLUSRounded1c-Bold;
+    font-size: 12pt;
+}
+    #freepik a span {
+        font-family: MPLUSRounded1c-Bold;
+        font-size: 12pt;
+    }
+#add {
+    font-family: GveretLevinAlefAlefAlef-Regular;
+    font-size: 18pt;
+}
+/*קישורים לא עובדים/לא קיימים*/
+.notallowed {
+    text-decoration: none;
+    cursor: not-allowed; /*מגדיר שאי אפשר להיכנס לקישור קיים*/
+}
+.forFocus {
+    text-decoration: none;
+    cursor: unset; /*מגדיר שאי אפשר להיכנס לקישור קיים*/
+}
+

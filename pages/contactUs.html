@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="utf-8" />
+    <title>סלנגניישן-צור קשר</title>
+    <meta name="description" content="contact the author" />
+    <meta name="keywords" content="Israel, slang, words" />
+    <meta name="author" content="Yarden Mizrachi, Netta Soreq" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <link rel="icon" href="../images/תמונה קטנה.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+    <link href="../styles/reset.css" rel="stylesheet" />
+    <link href="../styles/contact.css" rel="stylesheet" />
+
+    <!-- JS -->
+    <script src="../jScripts/jquery-1.12.0.min.js"></script>
+
+</head>
+<body>
+    <div id="container">
+        <a href="#content" id="skiptopcontent">קפוץ לתוכן</a>
+        <div id="accessibility">
+            <img src="../images/buttons/הנגשה.png" alt="מעבר לאתר נגיש" />
+            <a href="../accessibility/accContactUs.html">
+                <img src="../images/buttons/הנגשה לחוץ.png" alt="מעבר לאתר נגיש" />
+            </a>
+        </div>
+        <header>
+            <div id="white">
+                <div id="turkiz">
+                    <a href="../index.html"><img src="../לוגו.png" alt="לוגו סלנג-ניישן" /></a>
+                    <nav id="mainNav" aria-label="תפריט ניווט ראשי">
+                        <ul>
+                            <li>
+                                <a href="" class="forFocus" aria-label="מקום מגורים"><div>מקום מגורים</div></a>
+                                <ul>
+                                    <li>
+                                        <a href="#" class="notallowed"><div>קיבוצים ומושבים</div></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="notallowed"><div>ירושלמים</div></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="notallowed"><div>תל אביבים</div></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="forFocus" aria-label="מגזרים ועדות"><div>מגזרים ועדות</div></a>
+                                <ul>
+                                    <li>
+                                        <a href="#" class="notallowed"><div>דתיים וחרדים</div></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="notallowed"><div>ערבים</div></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="notallowed"><div>אשכנזים</div></a>
+                                    </li>
+                                    <li>
+                                        <a href="mizrachi.html"><div>מזרחים</div></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="notallowed"><div>סלנג צה"לי</div></a>
+                            </li>
+                            <li>
+                                <a href="generations.html"><div> במשך הדורות</div></a>
+                                <ul>
+                                    <li>
+                                        <a href="corona.html"><div>סלנג קורונה</div></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="contactUs.html"><div id="that">הוסיפו מילה</div></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <nav id="breadCrumbs" aria-label="תפריט פירורי לחם">
+            <ol>
+                <li><a href="../index.html">דף הבית</a></li>
+                <li>צור קשר</li>
+            </ol>
+        </nav>
+        <article role="main">
+            <div id="content"></div>
+            <h1>שכחנו משהו?</h1>
+            <hr />
+            <p>מזל שאתם כאן! שלחו לנו את המילים ששכחנו ונוסיף אותן מיד לאתר</p>
+            <p>רוצים סתם לדבר איתנו? גם זה אפשרי</p>
+            <div class="darkturquoise">
+                <h2>מלאו את הפרטים ונחזור אליכם</h2>
+            </div>
+
+            <form>
+                <label for="name">
+                    שם מלא <br />
+                    <input type="text" id="name" /> <br />
+                </label>
+                <label for="mail">
+                    כתובת מייל<br />
+                    <input type="email" id="mail" /> <br />
+                </label>
+                <h3>
+                    לאיזה דף תרצו לתרום?
+                </h3>
+                <select id="page">
+                    <option value="1">בחרו</option>
+                    <option value="2">סלנג דורות</option>
+                    <option value="3">סלנג קורונה</option>
+                    <option value="4">קיבוצים ומושבים</option>
+                    <option value="5">תל אביב</option>
+                    <option value="6">ירושלים</option>
+                    <option value="7">דתיים/חרדים</option>
+                    <option value="8">ערבים</option>
+                    <option value="9">אשכנזים</option>
+                    <option value="10">מזרחים</option>
+                    <option value="11">צה"לי</option>
+                    <option value="12">סתם רוצה לדבר</option>
+                </select> <br />
+                <label for="word">
+                    איזה מילה רציתם להוסיף?<br />
+                    <input type="text" id="word" /> <br />
+                </label>
+                <label for="meaning">
+                    פירוש המילה<br />
+                    <input type="text" id="meaning" /> <br />
+                </label>
+                <label for="message">
+                    דברו אלינו<br />
+                    <textarea id="message" rows="5"></textarea><br />
+                </label>
+                <h3>כמה כוכבים תרצו לתת לאתר שלנו?</h3>
+                <div id="rate">
+                    סמנו מתחת לכל כוכב<br />
+                    <label for="star1">
+                        <img src="../images/about/כוכב.svg" alt="כוכב" />
+                        <input type="checkbox" id="star1" name="stars" />
+                    </label>
+                    <label for="star2">
+                        <img src="../images/about/כוכב.svg" alt="כוכב" />
+                        <input type="checkbox" id="star2" name="stars" />
+                    </label>
+                    <label for="star3">
+                        <img src="../images/about/כוכב.svg" alt="כוכב" />
+                        <input type="checkbox" id="star3" name="stars" />
+                    </label>
+                    <label for="star4">
+                        <img src="../images/about/כוכב.svg" alt="כוכב" />
+                        <input type="checkbox" id="star4" name="stars" />
+                    </label>
+                    <label for="star5">
+                        <img src="../images/about/כוכב.svg" alt="כוכב" />
+                        <input type="checkbox" id="star5" name="stars" /> <br />
+                    </label>
+                </div>
+                <label for="send">
+                    <input type="submit" id="send" value="שלח" />
+                </label>
+            </form>
+        </article>
+        <div id="dati">
+            <p>שכוייח!</p>
+        </div>
+        <div id="solider">
+            <p>אנחנו מצדיעים לך על התרומה לאתר!</p>
+        </div>
+        <footer aria-label="מפת אתר">
+            <ul>
+                <li>
+                    מקום מגורים
+                    <ul>
+                        <li><a href="#" class="notallowed">קיבוצים ומושבים</a></li>
+                        <li><a href="#" class="notallowed">ירושלים</a></li>
+                        <li><a href="#" class="notallowed">תל אביב</a></li>
+                    </ul>
+                </li>
+                <li>
+                    מגזרים ועדות
+                    <ul>
+                        <li><a href="#" class="notallowed">דתיים וחרדים</a></li>
+                        <li><a href="#" class="notallowed">ערבים</a></li>
+                        <li><a href="#" class="notallowed">אשכנזים</a></li>
+                        <li><a href="mizrachi.html">מזרחים</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="notallowed">סלנג צהל"י</a></li>
+                <li>
+                    <a href="generations.html">לפי הדורות</a>
+                    <ul>
+                        <li><a href="corona.html">סלנג קורונה</a></li>
+                    </ul>
+                </li>
+                <li id="add">
+                    שכחנו משהו?
+                    <ul>
+                        <li><a href="contactUs.html">הוסיפו מילה</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">אודות</a></li>
+            </ul>
+            <p id="freepik">תודה לאתר <a href="http://www.freepik.com" target="_blank"><span lang="en">freepik</span></a> על עיצוב הדמויות!</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,649 @@
+﻿<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="utf-8" />
+    <title>סלנגניישן- במשך הדורות</title>
+    <meta name="description" content="the developmant of israeli slang" />
+    <meta name="keywords" content="Israel, slang,generations" />
+    <meta name="author" content="Yarden Mizrachi, Netta Soreq" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <link rel="icon" href="../images/תמונה קטנה.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+    <link href="../styles/reset.css" rel="stylesheet" />
+    <link href="../styles/accsesibilitiy/accGenerations.css" rel="stylesheet" />
+    <!-- JS -->
+    <script src="../jScripts/jquery-1.12.0.min.js"></script>
+
+</head>
+<body>
+    <div id="container">
+        <a href="#content" id="skiptopcontent">קפוץ לתוכן</a>
+        <div id="accessibility">
+            <img src="../images/buttons/הנגשה.png" alt="מעבר לאתר רגיל" />
+            <a href="../pages/generations.html">
+                <img src="../images/buttons/הנגשה לחוץ.png" alt="מעבר לאתר רגיל" />
+            </a>
+        </div>
+        <header>
+            <div id="white">
+                <div id="turkiz">
+                    <a href="accIndex.html"><img src="../לוגו.png" alt="לוגו סלנג-ניישן" /></a>
+                    <nav id="mainNav" aria-label="תפריט ניווט ראשי">
+                        <ul>
+                            <li>
+                                <a href="" class="forFocus" aria-label="מקום מגורים"><div>מקום מגורים</div></a>
+                                <ul>
+                                    <li>
+                                        <a href="#" class="notallowed"><div>קיבוצים ומושבים</div></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="notallowed"><div>ירושלמים</div></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="notallowed"><div>תל אביבים</div></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="forFocus" aria-label="מגזרים ועדות"><div>מגזרים ועדות</div></a>
+                                <ul>
+                                    <li>
+                                        <a href="#" class="notallowed"><div>דתיים וחרדים</div></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="notallowed"><div>ערבים</div></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="notallowed"><div>אשכנזים</div></a>
+                                    </li>
+                                    <li>
+                                        <a href="accMizrachi.html"><div>מזרחים</div></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="notallowed"><div>סלנג צה"לי</div></a>
+                            </li>
+                            <li>
+                                <a href="accGenerations.html"><div id="that"> במשך הדורות</div></a>
+                                <ul>
+                                    <li>
+                                        <a href="accCorona.html"><div>סלנג קורונה</div></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="accContactUs.html"><div>הוסיפו מילה</div></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <nav id="breadCrumbs" aria-label="תפריט פירורי לחם">
+            <ol>
+                <li><a href="accIndex.html">דף הבית</a></li>
+                <li>לפי הדורות</li>
+            </ol>
+        </nav>
+        <nav id="sideNav" aria-label="תפריט צידי">
+            <ul>
+                <li>
+                    <a href="#tofifties">
+                        <div>
+                            <img src="../images/generations/דמויות סבים סרגל צד.png" alt="קישור שנות החמישים ושישים" />
+                            <span>1948 - 1970</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#toseventies">
+                        <div>
+                            <img src="../images/generations/דמויות הורים סרגל צד.png" alt="קישור שנות השבעים והשמונים" />
+                            <span>1970 - 1990</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#tonineties">
+                        <div>
+                            <img src="../images/generations/דמויות נינטיז סרגל צד.png" alt="קישור שנות התשעים ותחילת שנות האלפיים" />
+                            <span>1990 - 2010</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#tonow">
+                        <div>
+                            <img src="../images/generations/דמויות היום סרגל צד.png" id="resize" alt="קישור העשור הנוכחי" />
+                            <span>2010 - 2020</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <article role="main">
+            <div id="content"></div>
+            <section id="descraption">
+                <h1>
+                    איך הסלנג הישראלי התפתח במהלך השנים?
+                </h1>
+                <hr />
+                <p>
+                    מאז שבן גוריון הכריז על הקמת המדינה ועד היום הסלנג שלנו משתנה ומתפתח. אז מה היו המילים הכי ישראליות במהלך הדורות?
+                </p>
+                <h2>לאיזה תקופה נרצה לחזור?</h2>
+                <nav id="insideNav" aria-label="תפריט פנימי">
+                    <ul>
+                        <li>
+                            <a href="#tofifties"><div id="grand">פיפטיז וסיקסטיז</div></a>
+                        </li>
+                        <li>
+                            <a href="#toseventies"><div id="parents">סבנטיז ואייטיז</div></a>
+                        </li>
+                        <li>
+                            <a href="#tonineties"><div id="us">ניינטיז והמילניום</div></a>
+                        </li>
+                        <li>
+                            <a href="#tonow"><div id="teen">ממש <br />עכשיו</div></a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            <section id="fifties">
+                <div id="tofifties"></div>
+                <div class="headlineImg">
+                </div>
+                <div class="darkturquoise">
+                    <h3>
+                        הימים שבגרוש היה חור <br />
+                        מהקמת המדינה ועד סוף שנות ה60
+                    </h3>
+                </div>
+                <div class="words">
+                    <div class="firstRightWord">
+                        <p class="word">בלע פטיפון</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%91%d7%9c%d7%a2%20%d7%a4%d7%98%d7%99%d7%a4%d7%95%d7%9f%20(online-audio-converter.com).mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%91%d7%9c%d7%a2%20%d7%a4%d7%98%d7%99%d7%a4%d7%95%d7%9f.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">נודניק, מדבר הרבה</p>
+                        <p class="word">לקשקש בקומקום</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%9c%d7%a7%d7%a9%d7%a7%d7%a9%20%d7%91%d7%a7%d7%95%d7%9e%d7%a7%d7%95%d7%9d%20(online-audio-converter.com).mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%a7%d7%a9%d7%a7%d7%a9%20%d7%91%d7%a7%d7%95%d7%9e%d7%a7%d7%95%d7%9d.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">
+                            לדבר שטויות
+                        </p>
+                        <p class="word">שמחת זקנתי</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/generations/%d7%a9%d7%9e%d7%97%d7%aa%20%d7%96%d7%a7%d7%a0%d7%aa%d7%99%20(online-audio-converter.com).mp3" type="audio/mpeg" />
+                                <source src="../sound/generations/%d7%a9%d7%9e%d7%97%d7%aa%20%d7%96%d7%a7%d7%a0%d7%aa%d7%99.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">לא באמת מעניין</p>
+                        <p class="word">נפל לו האסימון</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/OGG/%d7%a0%d7%a4%d7%9c%20%d7%9c%d7%95%20%d7%94%d7%90%d7%a1%d7%99%d7%9e%d7%95%d7%9f.ogg" type="audio/ogg" />
+                                <source src="../sound/MP3/%d7%a0%d7%a4%d7%9c%20%d7%9c%d7%95%20%d7%94%d7%90%d7%a1%d7%99%d7%9e%d7%95%d7%9f.mp3" type="audio/mpeg" />
+                            </audio>
+                        <p class="mean">הבין אחרי כמה זמן</p>
+                        <div class="extra">
+                            <img src="../images/generations/איש מדבר שנות ה50.png" alt="דוגמא לשימוש" />
+                            <p>
+                                אם מישהו <b>מקשקש בקומקום</b> כאילו הוא <b>בלע פטיפון</b>, אפשר לענות לו <b>שמחת זקנתי</b> ולקוות <b>שיפול לו האסימון</b> והוא יפסיק.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="leftWord">
+                        <p class="word">לבוש חתן כלה</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%9c%d7%91%d7%95%d7%a9%20%d7%97%d7%aa%d7%9f%20%d7%9b%d7%9c%d7%94.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%9c%d7%91%d7%95%d7%a9%20%d7%97%d7%aa%d7%9f%20%d7%9b%d7%9c%d7%94.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">לבוש חגיגי</p>
+                        <p class="word">טאוויל</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%98%d7%90%d7%95%d7%95%d7%99%d7%9c.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%98%d7%90%d7%95%d7%95%d7%99%d7%9c.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">גבוה</p>
+                        <p class="word">הביאו אותה מהשלל</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%94%d7%91%d7%99%d7%90%d7%95%20%d7%90%d7%95%d7%aa%d7%94%20%d7%9e%d7%94%d7%a9%d7%9c%d7%9c.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%94%d7%91%d7%99%d7%90%d7%95%20%d7%90%d7%95%d7%aa%d7%94%20%d7%9e%d7%94%d7%a9%d7%9c%d7%9c.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">מישהי מכוערת</p>
+                        <p class="word">נערת ריינס</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%a0%d7%a2%d7%a8%d7%aa%20%d7%a8%d7%99%d7%99%d7%a0%d7%a1.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%a0%d7%a2%d7%a8%d7%aa%20%d7%a8%d7%99%d7%99%d7%a0%d7%a1.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">מישהי מכוערת</p>
+                        <p class="word">פרצוף צנע</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%a4%d7%a8%d7%a6%d7%95%d7%a3%20%d7%a6%d7%a0%d7%a2.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%a4%d7%a8%d7%a6%d7%95%d7%a3%20%d7%a6%d7%a0%d7%a2.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">מישהי מכוערת</p>
+                        <div class="inextra">
+                        </div>
+                    </div>
+                    <div class="secRightWord">
+                        <p class="word">יושב על הבלקון</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%99%d7%95%d7%a9%d7%91%20%d7%a2%d7%9c%20%d7%94%d7%91%d7%9c%d7%a7%d7%95%d7%9f.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%99%d7%95%d7%a9%d7%91%20%d7%a2%d7%9c%20%d7%94%d7%91%d7%9c%d7%a7%d7%95%d7%9f.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">עצלן</p>
+                        <p class="word">פושטק</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%a4%d7%95%d7%a9%d7%98%d7%a7.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%a4%d7%95%d7%a9%d7%98%d7%a7.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">מופרע</p>
+                        <p class="word">שולמן ישלם</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%a9%d7%95%d7%9c%d7%9e%d7%9f%20%d7%99%d7%a9%d7%9c%d7%9d.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%a9%d7%95%d7%9c%d7%9e%d7%9f%20%d7%99%d7%a9%d7%9c%d7%9d.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">התנערות מאחריות</p>
+                        <p class="word">אלף אלף</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%90%d7%9c%d7%a3%20%d7%90%d7%9c%d7%a3.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%90%d7%9c%d7%a3%20%d7%90%d7%9c%d7%a3.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">מעולה, מצוין, איכותי</p>
+                        <p class="word">לא שווה מיל</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%9c%d7%90%20%d7%a9%d7%95%d7%95%d7%94%20%d7%9e%d7%99%d7%9c.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%9c%d7%90%20%d7%a9%d7%95%d7%95%d7%94%20%d7%9e%d7%99%d7%9c.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">לא שווה כלום</p>
+                        <div class="extra">
+                            <img src="../images/generations/אישה מדברת שנות ה50.png" alt="דוגמא לשימוש" />
+                            <p>
+                                כדאי לך לצאת איתו אם הוא בחור <b>אלף אלף</b>, אבל אם הוא <b>פושטק</b> <b>שיושב על הבלקון</b> ומחכה <b>ששולמן ישלם</b>, שלא תחשבי על זה, הוא <b>לא שווה מיל</b>!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="seventies">
+                <div id="toseventies"></div>
+                <div class="headlineImg">
+                </div>
+                <div class="darkturquoise">
+                    <h3>
+                        היה על הכיפאק! <br />
+                        שנות השבעים ושנות השמונים
+                    </h3>
+                </div>
+                <div class="words">
+                    <div class="firstRightWord">
+                        <p class="word">גם יפה וגם אופה</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%92%d7%9d%20%d7%99%d7%a4%d7%94%20%d7%95%d7%92%d7%9d%20%d7%90%d7%95%d7%a4%d7%94.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%92%d7%9d%20%d7%99%d7%a4%d7%94%20%d7%95%d7%92%d7%9d%20%d7%90%d7%95%d7%a4%d7%94.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">יש בה הכל</p>
+                        <p class="word">יא ווארדי</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%99%d7%90%20%d7%95%d7%95%d7%a8%d7%90%d7%93%d7%99.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%99%d7%90%20%d7%95%d7%95%d7%a8%d7%90%d7%93%d7%99.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">וואו</p>
+                        <p class="word">שאפה</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%a9%d7%90%d7%a4%d7%94.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%a9%d7%90%d7%a4%d7%94.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">יפה</p>
+                        <p class="word">סבבה אגוזים</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%a1%d7%91%d7%91%d7%94%20%d7%90%d7%92%d7%95%d7%96%d7%99%d7%9d.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%a1%d7%91%d7%91%d7%94%20%d7%90%d7%92%d7%95%d7%96%d7%99%d7%9d.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">מעולה, טוב</p>
+                        <div class="extra">
+                            <img src="../images/generations/איש מדבר שנות ה70.png" alt="דוגמא לשימוש" />
+                            <p>
+                                <b>יא ווארדי</b> <b>איזה שאפה!</b> והיא <b>גם יפה וגם אופה.</b> כל יום איתה <b>סבבה אגוזים</b>!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="leftWord">
+                        <p class="word">סבון, יורם</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%a1%d7%91%d7%95%d7%9f%20%d7%99%d7%95%d7%a8%d7%9d.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%a1%d7%91%d7%95%d7%9f%20%d7%99%d7%95%d7%a8%d7%9d.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">חנון</p>
+                        <p class="word">שלומיאל</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%a9%d7%9c%d7%95%d7%9e%d7%99%d7%90%d7%9c.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%a9%d7%9c%d7%95%d7%9e%d7%99%d7%90%d7%9c.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">לא מוצלח</p>
+                        <p class="word">מודה</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%9e%d7%95%d7%93%d7%94.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%9e%d7%95%d7%93%d7%94.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">אופנה</p>
+                        <p class="word">אבו ארבע</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%90%d7%91%d7%95%d7%90%d7%a8%d7%91%d7%a2%20(online-audio-converter.com).mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%90%d7%91%d7%95%d7%90%d7%a8%d7%91%d7%a2.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">עם משקפיים</p>
+                        <div class="inextra">
+                        </div>
+                    </div>
+                    <div class="secRightWord">
+                        <p class="word">אין לו דם</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/OGG/%d7%90%d7%99%d7%9f%20%d7%9c%d7%95%20%d7%93%d7%9d.mp3" type="audio/mpeg" />
+                                <source src="../sound/MP3/%d7%90%d7%99%d7%9f%20%d7%9c%d7%95%20%d7%93%d7%9d%20MP3.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">אין לו אומץ</p>
+                        <p class="word">בחייאת זומזום</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%91%d7%97%d7%99%d7%99%d7%90%d7%aa%20%d7%96%d7%95%d7%9e%d7%96%d7%95%d7%9d.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%91%d7%97%d7%99%d7%99%d7%90%d7%aa%20%d7%96%d7%95%d7%9e%d7%96%d7%95%d7%9d.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">נו בחייך, בבקשה</p>
+                        <p class="word">בש.ק.ר</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%91-%20%d7%a9.%d7%a7.%d7%a8.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%91-%20%d7%a9.%d7%a7.%d7%a8.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">בצחוק, לא באמת</p>
+                        <p class="word">גזעי</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%92%d7%96%d7%a2%d7%99.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%92%d7%96%d7%a2%d7%99.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">מגניב</p>
+                        <p class="word">עושה דאווינים</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%93%d7%90%d7%95%d7%95%d7%99%d7%a0%d7%99%d7%9d.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%93%d7%90%d7%95%d7%95%d7%99%d7%a0%d7%99%d7%9d.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">מנסה לעשות רושם</p>
+                        <p class="word">לפלח</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%9c%d7%a4%d7%9c%d7%97.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%9c%d7%a4%d7%9c%d7%97.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">לגנוב</p>
+                        <div class="extra">
+                            <img src="../images/generations/אישה מדברת שנות ה70.png" alt="דוגמא לשימוש" />
+                            <p>
+                                הוא אמר שהוא <b>יפלח</b> מהמכולת? <b>בחייאת זומזום</b> זה היה <b>בש.ק.ר!</b> הוא סתם מנסה <b>לעשות דאווינים</b> כדי שתחשבו שהוא <b>גזעי</b> אבל <b>אין לו דם</b>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="nineties">
+                <div id="tonineties"></div>
+                <div class="headlineImg">
+                </div>
+                <div class="darkturquoise">
+                    <h3>
+                        עשורים שחבל על הזמן <br />
+                        משנות התשעים עד תחילת שנות האלפיים
+                    </h3>
+                </div>
+                <div class="words">
+                    <div class="firstRightWord">
+                        <p class="word">אהבל</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%90%d7%94%d7%91%d7%9c%20(online-audio-converter.com).mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%90%d7%94%d7%91%d7%9c.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">מטומטם</p>
+                        <p class="word">חי בלה לה לנד</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/OGG/%d7%97%d7%99%20%d7%91%d7%9c%d7%94%20%d7%9c%d7%94%20%d7%9c%d7%a0%d7%93.ogg" type="audio/ogg" />
+                                <source src="../sound/OGG/%d7%97%d7%99%20%d7%91%d7%9c%d7%94%20%d7%9c%d7%94%20%d7%9c%d7%a0%d7%93.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">מנותק מהמציאות</p>
+                        <p class="word">חש</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%97%d7%a9.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%97%d7%a9.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">מתנשא</p>
+                        <p class="word">קול</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%a7%d7%95%d7%9c.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%a7%d7%95%d7%9c.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">מגניב</p>
+                        <div class="extra">
+                            <img src="../images/generations/איש מדבר שנות ה90.png" alt="דוגמא לשימוש" />
+                            <p>
+                                <b>האהבל</b> הזה ממש <b>חי בלה לה לנד!</b> הוא <b>חש את עצמו</b> וחושב שהוא <b>קול</b>
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="leftWord">
+                        <p class="word">אחד ה___ אם לא ה</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%90%d7%97%d7%93%20%d7%94_%d7%90%d7%9d%20%d7%9c%d7%90%20%d7%94_%20(online-audio-converter.com).mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%90%d7%97%d7%93%20%d7%94__%d7%90%d7%9d%20%d7%9c%d7%90%20%d7%94__.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">הכי טוב שיש</p>
+                        <p class="word">אין</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%90%d7%99%d7%9f%20(online-audio-converter.com).mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%90%d7%99%d7%9f.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">עדכני</p>
+                        <p class="word">ברמות</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%91%d7%a8%d7%9e%d7%95%d7%aa.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%91%d7%a8%d7%9e%d7%95%d7%aa.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">ממש</p>
+                        <p class="word">סוף הדרך</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%a1%d7%95%d7%a3%20%d7%94%d7%93%d7%a8%d7%9a.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%a1%d7%95%d7%a3%20%d7%94%d7%93%d7%a8%d7%9a.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">מעולה</p>
+                        <p class="word">פצצות לגבות</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%a4%d7%a6%d7%a6%d7%95%d7%aa%20%d7%9c%d7%92%d7%91%d7%95%d7%aa.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%a4%d7%a6%d7%a6%d7%95%d7%aa%20%d7%9c%d7%92%d7%91%d7%95%d7%aa.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">מעולה</p>
+                        <div class="inextra">
+                        </div>
+                    </div>
+                    <div class="secRightWord">
+                        <p class="word">אזש</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%90%d7%96%d7%a9%20(online-audio-converter.com).mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%90%d7%96%d7%a9.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">בעצם לא</p>
+                        <p class="word">זבשך</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%96%d7%91%d7%a9%d7%9a.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%96%d7%91%d7%a9%d7%9a.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">בעיה שלך</p>
+                        <p class="word">חיבס</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%97%d7%99%d7%91%d7%a1.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%97%d7%99%d7%91%d7%a1.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">מנותק מהמציאות</p>
+                        <div class="extra">
+                            <img src="../images/generations/אישה מדברת שנות ה90.png" alt="דוגמא לשימוש" />
+                            <p>
+                                זה בעברית בכלל?<br />
+                                <b>זבשך</b>- זאת בעיה שלך<br />
+                                <b>אזש</b>- אז זהו שלא<br />
+                                <b>חיבס</b>- חי בסרט<br />
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="now">
+                <div id="tonow"></div>
+                <div class="headlineImg">
+                </div>
+                <div class="darkturquoise">
+                    <h3>
+                        ברגעים אלו ממש <br />
+                        העשור הנוכחי
+                    </h3>
+                </div>
+                <div class="words">
+                    <div class="firstRightWord">
+                        <p class="word">בלתי</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%91%d7%9c%d7%aa%d7%99.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%91%d7%9c%d7%aa%d7%99.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">בלתי נסבל</p>
+                        <p class="word">חופר</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%97%d7%95%d7%a4%d7%a8.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%97%d7%95%d7%a4%d7%a8.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">מדבר הרבה, משעמם</p>
+                        <p class="word">מקריפ</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%9e%d7%a7%d7%a8%d7%99%d7%a4.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%9e%d7%a7%d7%a8%d7%99%d7%a4.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">מפחיד, יוצר תחושה לא נעימה</p>
+                        <p class="word">עף על עצמו</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%a2%d7%a3%20%d7%a2%d7%9c%20%d7%a2%d7%a6%d7%9e%d7%95.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%a2%d7%a3%20%d7%a2%d7%9c%20%d7%a2%d7%a6%d7%9e%d7%95.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">מתנשא</p>
+                        <div class="extra">
+                            <img src="../images/generations/איש מדבר היום.png" alt="דוגמא לשימוש" />
+                            <p>
+                                סיבות לא לאהוב מישהו: <br />
+                                <b>
+                                    עף על עצמו <br />
+                                    הוא בלתי <br />
+                                    חופר <br />
+                                </b>
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="leftWord">
+                        <p class="word">אין דברים כאלה</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%90%d7%99%d7%9f%20%d7%93%d7%91%d7%a8%d7%99%d7%9d%20%d7%9b%d7%90%d7%9c%d7%94%20(online-audio-converter.com).mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%90%d7%99%d7%9f%20%d7%93%d7%91%d7%a8%d7%99%d7%9d%20%d7%9b%d7%90%d7%9c%d7%94.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">הכי טוב שיש</p>
+                        <p class="word">חיים שלי</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%97%d7%99%d7%99%d7%9d%20%d7%a9%d7%9c%d7%99.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%97%d7%99%d7%99%d7%9d%20%d7%a9%d7%9c%d7%99.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">כינוי חיבה</p>
+                        <p class="word">מוש</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%9e%d7%95%d7%a9.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%9e%d7%95%d7%a9.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">מושלם</p>
+                        <div class="inextra">
+                        </div>
+                    </div>
+                    <div class="secRightWord">
+                        <p class="word">פחות</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%a4%d7%97%d7%95%d7%aa.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%a4%d7%97%d7%95%d7%aa.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">לא</p>
+                        <p class="word">קל</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%a7%d7%9c.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%a7%d7%9c.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">ברור</p>
+                        <p class="word">קשוח</p>
+                            <audio controls="controls" aria-label="שמע הקלטה">
+                                <source src="../sound/MP3/%d7%a7%d7%a9%d7%95%d7%97.mp3" type="audio/mpeg" />
+                                <source src="../sound/OGG/%d7%a7%d7%a9%d7%95%d7%97.ogg" type="audio/ogg" />
+                            </audio>
+                        <p class="mean">קשה</p>
+                    </div>
+                </div>
+            </section>
+            <aside>
+                <div id="tocorona">
+                    <img src="../images/generations/מעבר לקורונה.png" alt="" />
+                    <p>
+                        <b>הגיע זמן קורונה!</b> <br />
+                        הקורונה הפכה לנו את החיים וגם השפה שלנו השתנתה בגללה.
+                        אז מה המילים הכי חיוניות כיום?
+                    </p>
+                    <a href="accCorona.html" aria-label="קישור לדף סלנג קורונה">
+                        <div id="arrows">
+                        </div>
+                    </a>
+                </div>
+            </aside>
+        </article>
+        <footer aria-label="מפת אתר">
+            <ul>
+                <li>
+                    מקום מגורים
+                    <ul>
+                        <li><a href="#" class="notallowed">קיבוצים ומושבים</a></li>
+                        <li><a href="#" class="notallowed">ירושלים</a></li>
+                        <li><a href="#" class="notallowed">תל אביב</a></li>
+                    </ul>
+                </li>
+                <li>
+                    מגזרים ועדות
+                    <ul>
+                        <li><a href="#" class="notallowed">דתיים וחרדים</a></li>
+                        <li><a href="#" class="notallowed">ערבים</a></li>
+                        <li><a href="#" class="notallowed">אשכנזים</a></li>
+                        <li><a href="accMizrachi.html">מזרחים</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="notallowed">סלנג צהל"י</a></li>
+                <li>
+                    <a href="accGenerations.html">לפי הדורות</a>
+                    <ul>
+                        <li><a href="accCorona.html">סלנג קורונה</a></li>
+                    </ul>
+                </li>
+                <li id="add">
+                    שכחנו משהו?
+                    <ul>
+                        <li><a href="accContactUs.html">הוסיפו מילה</a></li>
+                    </ul>
+                </li>
+                <li><a href="accAbout.html">אודות</a></li>
+            </ul>
+            <p id="freepik">תודה לאתר <a href="http://www.freepik.com" target="_blank"><span lang="en">freepik</span></a> על עיצוב הדמויות!</p>
+        </footer>
+
+    </div>
+</body>
+</html>
